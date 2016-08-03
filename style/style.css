@@ -21,3 +21,12 @@ td {
 	font-size: 100px;
 	text-align: center;
 }
+
+td p {
+	position: relative;
+	margin: 0 auto;
+}
+
+.cell {
+	border: 1px solid red;
+}
