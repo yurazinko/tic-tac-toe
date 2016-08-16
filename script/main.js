@@ -1,5 +1,5 @@
 $(function() {
-    
+
     var cellsArray = [
         cell01,
         cell02,
@@ -11,14 +11,13 @@ $(function() {
         cell08,
         cell09
     ];
-
+    var count = 0;
     var addCount = (function() {
-        var count = 0;
         return function() {
             if (count < 5) {
                 return count += 1;
             } else {
-                count = 0;
+                return count = 0;
             }
         }
     })();
@@ -26,33 +25,34 @@ $(function() {
     function clearCells() {
         for (var i = 0; i < cellsArray.length; i++) {
             cellsArray[i].innerHTML = '';
+            count = 0;
         }
     }
 
     function checkCombination() {
-        if (cell01.innerHTML == '<p>X</p>' && cell02.innerHTML == '<p>X</p>' && cell03.innerHTML == '<p>X</p>') { // X
-            alert('x wins');
+        if        (cell01.innerHTML == '<p>X</p>' && cell02.innerHTML == '<p>X</p>' && cell03.innerHTML == '<p>X</p>') { // X
+            alert('X wins');
             clearCells();
         } else if (cell01.innerHTML == '<p>X</p>' && cell05.innerHTML == '<p>X</p>' && cell09.innerHTML == '<p>X</p>') {
-            alert('x wins');
+            alert('X wins');
             clearCells();
         } else if (cell01.innerHTML == '<p>X</p>' && cell04.innerHTML == '<p>X</p>' && cell07.innerHTML == '<p>X</p>') {
-            alert('x wins');
+            alert('X wins');
             clearCells();
         } else if (cell02.innerHTML == '<p>X</p>' && cell05.innerHTML == '<p>X</p>' && cell08.innerHTML == '<p>X</p>') {
-            alert('x wins');
+            alert('X wins');
             clearCells();
         } else if (cell03.innerHTML == '<p>X</p>' && cell05.innerHTML == '<p>X</p>' && cell07.innerHTML == '<p>X</p>') {
-            alert('x wins');
+            alert('X wins');
             clearCells();
         } else if (cell03.innerHTML == '<p>X</p>' && cell06.innerHTML == '<p>X</p>' && cell09.innerHTML == '<p>X</p>') {
-            alert('x wins');
+            alert('X wins');
             clearCells();
         } else if (cell04.innerHTML == '<p>X</p>' && cell05.innerHTML == '<p>X</p>' && cell06.innerHTML == '<p>X</p>') {
-            alert('x wins');
+            alert('X wins');
             clearCells();
         } else if (cell07.innerHTML == '<p>X</p>' && cell08.innerHTML == '<p>X</p>' && cell09.innerHTML == '<p>X</p>') {
-            alert('x wins');
+            alert('X wins');
             clearCells();
         } else if (cell01.innerHTML == '<p>0</p>' && cell05.innerHTML == '<p>0</p>' && cell09.innerHTML == '<p>0</p>') { // 0
             alert('0 wins');
