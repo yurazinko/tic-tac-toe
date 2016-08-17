@@ -30,7 +30,7 @@ $(function() {
     }
 
     function checkCombination() {
-        if        (cell01.innerHTML == '<p>X</p>' && cell02.innerHTML == '<p>X</p>' && cell03.innerHTML == '<p>X</p>') { // X
+        if (cell01.innerHTML == '<p>X</p>' && cell02.innerHTML == '<p>X</p>' && cell03.innerHTML == '<p>X</p>') { // X
             alert('X wins');
             clearCells();
         } else if (cell01.innerHTML == '<p>X</p>' && cell05.innerHTML == '<p>X</p>' && cell09.innerHTML == '<p>X</p>') {
@@ -78,28 +78,28 @@ $(function() {
         }
     }
 
-    $('.cell').click(function() {
-        function compTurn() {
-
-            var random = (function() {
-                if (count < 5) {
-                    return Math.floor((Math.random() * 8) + 1);
-                } else {
-                    return false;
-                }
-            })();
-
-            console.log('Random: ' + random);
-
-
-            if (cellsArray[random].innerHTML == '<p>X</p>' || cellsArray[random].innerHTML == '<p>0</p>') {
-                compTurn();
+    function compTurn() {
+        var random = (function() {
+            if (count < 5) {
+                return Math.floor((Math.random() * 8) + 1);
             } else {
-                cellsArray[random].innerHTML = '<p>0</p>';
+                return false;
             }
+        })();
 
-            checkCombination();
+        console.log('Random: ' + random);
+
+
+        if (cellsArray[random].innerHTML == '<p>X</p>' || cellsArray[random].innerHTML == '<p>0</p>') {
+            compTurn();
+        } else {
+            cellsArray[random].innerHTML = '<p>0</p>';
         }
+
+        checkCombination();
+    }
+
+    $('.cell').click(function() {
 
         if (this.innerHTML == '<p>X</p>' || this.innerHTML == '<p>0</p>') {
             return false;
