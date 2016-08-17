@@ -4,6 +4,7 @@ body {
 
 
 table {
+	table-layout: initial;
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 5px;
@@ -23,6 +24,7 @@ td {
 }
 
 td p {
+	display: block;
 	position: relative;
 	margin: 0 auto;
 }

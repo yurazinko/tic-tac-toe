@@ -24,7 +24,7 @@ $(function() {
 
     function clearCells() {
         for (var i = 0; i < cellsArray.length; i++) {
-            cellsArray[i].innerHTML = '';
+            cellsArray[i].innerHTML = '<p></p>';
             count = 0;
         }
     }
