@@ -30,13 +30,16 @@ td p {
 	width: 90%;
 	height: 90%;
 	background: yellow;
-  	background: -webkit-radial-gradient(#DAA520 , yellow); 
- 	background: -o-radial-gradient(#DAA520, yellow); 
- 	background: -moz-radial-gradient(#DAA520, yellow); 
- 	background: radial-gradient(#DAA520, yellow); 
 	border: 10px solid yellow; 
 	border-radius: 20px;
 	box-shadow: 10px 10px;
+}
+
+td p:hover {
+	background: -webkit-radial-gradient(#DAA520 , yellow); 
+ 	background: -o-radial-gradient(#DAA520, yellow); 
+ 	background: -moz-radial-gradient(#DAA520, yellow); 
+ 	background: radial-gradient(#DAA520, yellow); 
 }
 
 .cell {

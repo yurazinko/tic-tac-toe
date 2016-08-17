@@ -106,7 +106,7 @@ $(function() {
         } else {
             this.innerHTML = '<p>X</p>';
             count = addCount();
-            console.log(count);
+            console.log('Count: ' + count);
             if (count < 5) {
                 setTimeout(compTurn, 500);
             } else {
