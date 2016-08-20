@@ -108,8 +108,9 @@ $(function() {
             count = addCount();
             console.log('Count: ' + count);
             if (count < 5) {
-                setTimeout(compTurn, 500);
+                setTimeout(compTurn, 200);
             } else {
+                checkCombination();
                 clearCells();
             }
 
